@@ -1,0 +1,49 @@
+doctype html              
+html. // THAT DOT
+    <head>
+        <script>
+            // http://stackoverflow.com/questions/20618355/the-simplest-possible-javascript-countdown-timer
+            function startTimer(duration, display) {
+                var timer = duration;
+                var minutes, seconds;
+                var timerIntervalId = setInterval(function () {
+                    // convert time to minutes and seconds
+                    minutes = parseInt(timer / 60, 10);
+                    seconds = parseInt(timer % 60, 10);
+                    // format the display to always show ##:##
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+                    // display the time
+                    display.textContent = minutes + ":" + seconds;
+                    // time goes by
+                    if (--timer < -1) {
+                        window.clearInterval(timerIntervalId);
+                        alert("time is up");
+                        display.textContent = "end";
+                    }
+                }, 1000);
+            }
+
+            window.onload = function () {
+                var duration = #{locals.remainingTime};
+                var display = document.querySelector('#remainingTimeText');
+                startTimer(duration, display);
+            };
+        </script>
+    </head>
+    <body>
+        <h2>#{locals.title}</h2>
+        <div>
+            Remaining Time: <span id="remainingTimeText">start</span>
+        </div>
+        <br/>
+        <div>
+            <form action="index">
+                <input type="submit" value="Go to Index Page" />
+            </form>
+            <br/>
+            <form action="register">
+                <input type="submit" value="Go to Timer" />
+            </form>
+        </div>
+    </body>

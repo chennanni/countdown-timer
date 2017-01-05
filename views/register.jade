@@ -1,0 +1,24 @@
+doctype html              
+html. // THAT DOT
+    <head>
+        <script>
+            function myFunction() {
+                document.getElementById("myForm").submit();
+            }
+        </script>
+    </head>
+    <body>
+        <h2>#{locals.title}</h2>
+        <div>
+            <form id="myForm" action="running">
+                Countdown Time: <input type="number" name="countdownTime"> second
+                <input type="button" onclick="myFunction()" value="Submit">
+            </form>
+        </div>
+        <br/>
+        <div>
+            <form action="index">
+                <input type="submit" value="Go to Index Page" />
+            </form>
+        </div>
+    </body>

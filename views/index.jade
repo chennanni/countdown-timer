@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+  body
+    h2 #{locals.title}
+    p
+        | User stories:
+        ul
+            li 
+                | Make a web page which features a countdown timer on it. 
+            li 
+                | This countdown will be counting down to a specified date and time entered by the user. 
+            li 
+                | When the deadline is reached, have the timer stop and display a message.
+
+    p.
+        <form action="register">
+            <input type="submit" value="Go to Timer" />
+        </form>
