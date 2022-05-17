@@ -9,9 +9,9 @@
 ## Usage
 Go to the app [website](https://max-countdown-timer.herokuapp.com) -> Click "Go to Timer" -> input countdown time in second and "Submit"
 
-![example1](/example1.PNG)
+![example1](https://github.com/chennanni/countdown-timer/blob/master/example_1.PNG)
 
-![example2](/example2.PNG)
+![example2](https://github.com/chennanni/countdown-timer/blob/master/example_2.PNG)
 
 ## Run In Local
 Also, you can download the project and run in your local with
